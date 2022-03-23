@@ -9,17 +9,19 @@ function App() {
   const [dice, setDice] = useState(allNewDice());
   const [tenzies, setTenzies] = useState(false);
 
-  // console.log("component rendered...");
-
   useEffect(() => {
-    const allHeld = dice.every((die) => die.isHeld);
+    const allHeld = dice.every((die) => die.isHeld); // return true || false
+
     const firstValue = dice[0].value;
+    // console.log("firstValue =>", firstValue);
+
     const allSameValue = dice.every((die) => die.value === firstValue);
     if (allHeld && allSameValue) {
       setTenzies(true);
     }
   }, [dice]);
 
+  // to avoid doing repeated things | this fn generates objects for Die
   function generateDie() {
     return {
       value: Math.ceil(Math.random() * 6),
@@ -29,9 +31,8 @@ function App() {
   }
 
   function allNewDice() {
-    const numOfDice = 10;
     const newDiceArr = [];
-    for (let i = 0; i < numOfDice; i++) {
+    for (let i = 0; i < 10; i++) {
       newDiceArr.push(generateDie());
     }
     return newDiceArr;

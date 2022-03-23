@@ -1,6 +1,9 @@
+import "./Die.css";
+
 function Die(props) {
+  // console.log("props =>", props);
   const dieStyle = {
-    backgroundColor: props.isHeld ? "#59E391" : "white",
+    backgroundColor: props.isHeld ? "#59E391" : "#fff",
   };
 
   return (
