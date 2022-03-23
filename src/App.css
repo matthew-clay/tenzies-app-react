@@ -4,7 +4,7 @@
   height: 500px;
   margin: 50px auto;
   border-radius: 5px;
-  padding: 35px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -12,19 +12,22 @@
   user-select: none;
 }
 
+.tenzies-info {
+  text-align: center;
+}
+
 .title {
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: -0.03em;
+  padding-bottom: 30px;
 }
 
 .description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 16px;
-  letter-spacing: -0.03em;
+  font-size: 16px;
 }
 
 .dice-container {
